@@ -14,8 +14,9 @@
 
     async function modifyPdf() {
       // Fetch an existing PDF document
-      const url = ""
-      let TextToWrite=""
+      const url = "https://ik.imagekit.io/ufuxna3870p/mission_sarvarth/WhatsApp_Image_2023-05-15_at_4.03.42_PM__2__faCKxdH--.pdf?updatedAt=1684402013817"
+      let TextToWrite="Vaibhav Garg"
+      
   	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
       // Load a PDFDocument from the existing PDF bytes
@@ -33,12 +34,12 @@
 
       // Draw a string of text diagonally across the first page
       firstPage.drawText(TextToWrite, {
-        x: 5,
-        y: height / 2 + 300,
-        size: 50,
+        x: width/2,
+        y: (height - 20) / 2 ,
+        size: 10,
         font: helveticaFont,
-        color: rgb(0.95, 0.1, 0.1),
-        rotate: degrees(-45),
+        color: rgb(0.5, 0.5, 0.5),
+        
       })
 
       // Serialize the PDFDocument to bytes (a Uint8Array)
